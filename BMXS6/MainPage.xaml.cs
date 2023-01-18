@@ -13,8 +13,8 @@ namespace BMXS6
 {
     public partial class MainPage : ContentPage
     {
-        private const string Url = "http://127.0.0.1/moviles/post.php";
-        private readonly HttpClient Client = new HttpClient();
+        private const string Url = "http://192.168.17.58/moviles/post.php";
+        private readonly HttpClient estudiante = new HttpClient();
         private ObservableCollection<BMXS6.datos> _post;
         public MainPage()
         {
@@ -23,10 +23,14 @@ namespace BMXS6
 
         private async void btnGet_Clicked (object sender, EventArgs e)
         {
-            var content = await Client.GetStringAsync(Url);
+            var content = await estudiante.GetStringAsync(Url);
             List<BMXS6.datos> posts = JsonConvert.DeserializeObject<List<BMXS6.datos>>(content);
             _post = new ObservableCollection<BMXS6.datos>(posts);
             MyListView.ItemsSource = _post;
+
+
         }
+
+        
     }
 }

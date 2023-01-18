@@ -26,10 +26,10 @@ namespace BMXS6
                     WebClient estudiante = new WebClient();
                     var parametros = new System.Collections.Specialized.NameValueCollection();
                     parametros.Add("codigo", txtId.Text);
-                    parametros.Add("codigo", txtNombre.Text);
-                    parametros.Add("codigo", txtApellido.Text);
-                    parametros.Add("codigo", txtEdad.Text);
-                    estudiante.UploadValues("http://192.168.22.15/moviles/post.php", "POST", parametros);
+                    parametros.Add("nombre", txtNombre.Text);
+                    parametros.Add("apellido", txtApellido.Text);
+                    parametros.Add("edad", txtEdad.Text);
+                    estudiante.UploadValues("http://192.168.17.58/moviles/post.php", "POST", parametros);
 
                 }
                 catch (Exception ex)
@@ -45,7 +45,7 @@ namespace BMXS6
 
         private void btnRegresar_Clicked(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

@@ -10,9 +10,12 @@
         <Label x:Name="texto" Text=""></Label>
         <Button Text="Consultar"
                 x:Name="btnGet"
-                Clicked="btnGet_Clicked">
+                Clicked="btnGet_Clicked"
+                >
             
         </Button>
+
+        
         <ListView x:Name="MyListView">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -23,14 +26,18 @@
                              </Label>
                             <Label x:Name="lblapellido" Text="{Binding apellido}">
                             </Label>
+                            
+                            
                         </StackLayout>
+                        
                         
                     </ViewCell>
                 </DataTemplate>
                 
             </ListView.ItemTemplate>
         </ListView>
-        
+       
+
     </StackLayout>
 
 </ContentPage>
