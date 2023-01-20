@@ -11,7 +11,7 @@ namespace BMXS6
         public int codigo { get; set; }
         
        
-        public string Nombre { get; set; }
+        public string nombre { get; set; }
 
         
         public string apellido { get; set; }

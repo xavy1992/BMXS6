@@ -10,7 +10,7 @@ namespace BMXS6
         {
             InitializeComponent();
 
-            MainPage = new Registro();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
